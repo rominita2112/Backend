@@ -1,0 +1,24 @@
+POST http://localhost:3003/api/usuarios/Male HTTP/1.1
+Content-Type: application/json
+
+{
+    "id":77,
+    "Name":"Alan",
+    "Lastname":"Lord",
+    "dni":9873
+}
+###
+
+PUT http://localhost:3003/api/usuarios/Male/11 HTTP/1.1
+Content-Type: application/json
+
+{   
+    "id":11,
+    "Name":"Lorel",
+    "Lastname":"taylor",
+    "dni":2255
+}
+###
+GET http://localhost:3003/api/usuarios/Male HTTP/1.1
+Content-Type: application/json
+
