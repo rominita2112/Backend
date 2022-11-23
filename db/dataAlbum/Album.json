@@ -1,0 +1,48 @@
+ 
+ 
+[
+ {
+
+  "_id": {
+    "$oid": "63794320cdc15b62d91684d5"
+  },
+  "title": "flower",
+  "description": "flower-album",
+  "urlDeImagen": "https://images/flower.album/flower.webp",
+  "category": "flower",
+  "id": "1000"
+ },
+{
+  "_id": {
+    "$oid": "63794530cdc15b62d91684d7"
+  },
+  "title": "nature",
+  "description": "nature-album",
+  "urlDeImagen": "https://images/nature.album/nature.jpg",
+  "category": "nature",
+  "id": "2000"
+},
+{
+  "_id": {
+    "$oid": "637945b4cdc15b62d91684d8"
+  },
+  "title": "space",
+  "description": "deep space",
+  "urlDeImagen": "https://images/space.album/space.jpeg",
+  "category": "space",
+  "id": "3000"
+},
+{
+  "_id": {
+    "$oid": "637946bdcdc15b62d91684d9"
+  },
+  "title": "sun",
+  "description": "sun summer",
+  "urlDeImagen": "https://images/sun.album/sun.webp",
+  "category": "sun",
+  "id": "4000"
+}]
+
+
+
+ 

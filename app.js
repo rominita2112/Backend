@@ -1,15 +1,26 @@
-const express= require('express');
-const app= express();
-const dotenv= require('dotenv');
+const express=require('express');
+const app=express();
+const dotenv=require('dotenv');
 dotenv.config();
 app.use(express.json());
-const {usuaryDates} =require('./Usuarios/usuarios');
-const routerMale= require('./Routers/Male.js');
-app.use('/api/usuarios/Male', routerMale);
+app.use(express.urlencoded({extended :true}));
+const userRoutes=require('./routes/userRoutes');
+const albumRoutes=require('./routes/albumRoutes');
+const photoRoutes=require('./routes/photoRoutes');
+const mongoose=require('mongoose');
+
+app.use('/account' ,userRoutes);
+app.use('/account', albumRoutes);
+app.use('/account', photoRoutes);
 
 
-console.log(usuaryDates);
+app.listen(process.env.PORT,()=>
+  console.log("estoy escuchando desde el puerto 5100"));
 
-
-app.listen(process.env.PORT,()=>{
-  console.log(`${process.env.MESSAGE} on port ${process.env.PORT}`)})
+mongoose.connect(process.env.MONGO_DB,{useNewUrlParser:true},(error, respose)=>{
+ if(error){
+    return console.log('no te conectaste a la base de datos');
+  } 
+  console.log('te conectaste exitosamente a mongoose');  
+  
+});
